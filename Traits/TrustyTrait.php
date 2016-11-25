@@ -64,7 +64,7 @@ trait TrustyTrait
      *
      * @return bool
      */
-    public function is($name)
+    public function inRole($name)
     {
         foreach ($this->roles as $role) {
             if ($role->name == $name || $role->slug == $name || $role->id == $name) {
@@ -80,7 +80,7 @@ trait TrustyTrait
      *
      * @return bool
      */
-    public function isNot($name)
+    public function notInRole($name)
     {
         return !$this->is($name);
     }
